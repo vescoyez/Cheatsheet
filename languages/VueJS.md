@@ -1,3 +1,4 @@
+{%raw%}
 # Vue Cheatsheet
 
 ## Basic App
@@ -327,3 +328,4 @@ new Vue({
   },
 });
 ```
+{%endraw%}

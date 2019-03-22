@@ -11,8 +11,14 @@
 
 ## New App
 
+Install/Update rails
+
 ```
-$ rails new -T --database postgresql YOUR_APP_NAME
+$ gem install rails
+```
+
+```
+$ rails new YOUR_APP_NAME -d postgresql --skip-coffee --webpack=stimulus
 ```
 
 - `-T` : remove tests

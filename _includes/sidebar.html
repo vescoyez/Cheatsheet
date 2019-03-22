@@ -7,7 +7,14 @@
         {% for site_page in site.pages %}
           {% if site_page.dir == '/languages/' %}
             {% assign page_name = site_page.name | split: '.md' | first %}
-            <a class="page-link" href="{{ site_page.url | relative_url }}">{{ page_name }}</a>
+            {% assign icon_name = page_name | downcase %}
+            {% if icon_name == "css" %}
+              {% assign icon_name = "css3" %}
+            {% endif %}
+            <a class="page-link" href="{{ site_page.url | relative_url }}">
+              <i class="devicon-{{ icon_name }}-plain"></i>
+              <span>{{ page_name }}</span>
+            </a>
           {% endif %}
         {% endfor %}
       </div>
